@@ -5,7 +5,7 @@ plugins {
     id("com.gradle.plugin-publish") version "0.12.0"
 }
 
-group = "io.github.corinz-bit"
+group = "io.github.corinz97"
 
 repositories {
     jcenter()
@@ -50,8 +50,8 @@ gitSemVer {
 }
 
 pluginBundle { // These settings are set for the whole plugin bundle
-    website = "testWebsite"
-    vcsUrl = "noLink"
+    website = "https://corinz97.github.io/"
+    vcsUrl = "https://github.com/corinz97/cool-greetings"
     tags = listOf("example", "greetings", "corinz", "unibo")
 }
 
@@ -61,7 +61,7 @@ gradlePlugin {
             id = "${project.group}.${project.name}"
             displayName = "Corinz Greeting plugin"
             description = "Example plugin for the LSS course"
-            implementationClass = "io.github.corinz-bit.GreetingPlugin"
+            implementationClass = "io.github.corinz97.GreetingPlugin"
         }
     }
 }

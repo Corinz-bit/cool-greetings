@@ -1,4 +1,4 @@
-package io.github.`corinz-bit`
+package io.github.corinz97
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
