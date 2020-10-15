@@ -1,7 +1,11 @@
 plugins {
-    kotlin("jvm") version "1.4.10"
+    kotlin("jvm") version "1.4.0"
     id ("org.danilopianini.git-sensitive-semantic-versioning") version "0.2.2"
+    `java-gradle-plugin`
+    id("com.gradle.plugin-publish") version "0.12.0"
 }
+
+group = "io.github.corinz-bit"
 
 repositories {
     jcenter()
@@ -43,4 +47,21 @@ dependencies {
 
 gitSemVer {
     version = computeGitSemVer()
+}
+
+pluginBundle { // These settings are set for the whole plugin bundle
+    website = "testWebsite"
+    vcsUrl = "noLink"
+    tags = listOf("example", "greetings", "corinz", "unibo")
+}
+
+gradlePlugin {
+    plugins {
+        create("GreetingsPlugin") { // One entry per plugin
+            id = "${project.group}.${project.name}"
+            displayName = "Corinz Greeting plugin"
+            description = "Example plugin for the LSS course"
+            implementationClass = "io.github.corinz-bit.GreetingPlugin"
+        }
+    }
 }

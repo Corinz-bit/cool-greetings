@@ -1,2 +1,1 @@
-rootProject.name = "MyGreetingsPlugin"
-
+rootProject.name = "cool-greetings"
